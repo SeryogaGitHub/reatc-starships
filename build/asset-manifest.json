@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.421610ad.chunk.css",
-    "main.js": "/static/js/main.4ed9966b.chunk.js",
-    "main.js.map": "/static/js/main.4ed9966b.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.665367fb.js",
-    "runtime-main.js.map": "/static/js/runtime-main.665367fb.js.map",
-    "static/js/2.277feef6.chunk.js": "/static/js/2.277feef6.chunk.js",
-    "static/js/2.277feef6.chunk.js.map": "/static/js/2.277feef6.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.1750b57e1237224cf868d7b0baf98248.js": "/precache-manifest.1750b57e1237224cf868d7b0baf98248.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.421610ad.chunk.css.map": "/static/css/main.421610ad.chunk.css.map",
-    "static/js/2.277feef6.chunk.js.LICENSE.txt": "/static/js/2.277feef6.chunk.js.LICENSE.txt"
+    "main.css": "/starships/build/static/css/main.421610ad.chunk.css",
+    "main.js": "/starships/build/static/js/main.f87a4c92.chunk.js",
+    "main.js.map": "/starships/build/static/js/main.f87a4c92.chunk.js.map",
+    "runtime-main.js": "/starships/build/static/js/runtime-main.36143248.js",
+    "runtime-main.js.map": "/starships/build/static/js/runtime-main.36143248.js.map",
+    "static/js/2.277feef6.chunk.js": "/starships/build/static/js/2.277feef6.chunk.js",
+    "static/js/2.277feef6.chunk.js.map": "/starships/build/static/js/2.277feef6.chunk.js.map",
+    "index.html": "/starships/build/index.html",
+    "precache-manifest.9c92409a9c211586531646da8b618f71.js": "/starships/build/precache-manifest.9c92409a9c211586531646da8b618f71.js",
+    "service-worker.js": "/starships/build/service-worker.js",
+    "static/css/main.421610ad.chunk.css.map": "/starships/build/static/css/main.421610ad.chunk.css.map",
+    "static/js/2.277feef6.chunk.js.LICENSE.txt": "/starships/build/static/js/2.277feef6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.665367fb.js",
+    "static/js/runtime-main.36143248.js",
     "static/js/2.277feef6.chunk.js",
     "static/css/main.421610ad.chunk.css",
-    "static/js/main.4ed9966b.chunk.js"
+    "static/js/main.f87a4c92.chunk.js"
   ]
 }
