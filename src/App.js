@@ -1,24 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import {NavLink, Route} from "react-router-dom";
+import ShipsContainer from "./components/Ships/ShipsContainer";
 import './App.css';
+import ShipContainer from "./components/Ships/ShipContainer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="center">
+      <NavLink to='/' className={'link'}>Main page</NavLink>
+      <Route exact path='/' render={() => <ShipsContainer/>}/>
+      <Route path='/starships/:userId?' render={() => <ShipContainer/>}/>
+      <Route path='/:text?&:page?' render={() => <ShipContainer/>}/>
     </div>
   );
 }
