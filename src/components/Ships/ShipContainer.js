@@ -2,20 +2,14 @@ import React from "react";
 import Ship from "./Ship";
 import {withRouter} from "react-router-dom";
 import {connect} from "react-redux";
-import axios from 'axios';
-import {setIsFetching, setProfile} from "../../redux/shipsReducer";
+import {getProfile} from "../../redux/shipsReducer";
 
 class ShipContainer extends React.Component{
   componentDidMount() {
-    const {setProfile, setIsFetching} = this.props;
+    const {getProfile} = this.props;
     let {userId} = this.props.match.params;
-    setIsFetching(true);
 
-    axios.get('https://swapi.co/api/starships/'+userId)
-      .then((response) => {
-        setProfile(response.data);
-        setIsFetching(false);
-    });
+    getProfile(userId);
   }
 
   render() {
@@ -33,4 +27,4 @@ let mapStateToProps = (state) => {
 
 let ShipContainerWithRouter = withRouter(ShipContainer);
 
-export default connect(mapStateToProps, {setProfile, setIsFetching})(ShipContainerWithRouter);
+export default connect(mapStateToProps, {getProfile})(ShipContainerWithRouter);

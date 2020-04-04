@@ -1,62 +1,53 @@
 import React from "react";
 import {connect} from "react-redux";
-import {setShips, setCurrentPage, setTotalCount, searchShips, setIsFetching} from "../../redux/shipsReducer";
+import {
+  searchShips,
+  getShips,
+  getShipsSearch,
+  setSearchText
+} from "../../redux/shipsReducer";
 import Ships from "./Ships";
-import axios from 'axios';
 import {withRouter} from "react-router-dom";
 
 class ShipsContainer extends React.Component {
   componentDidMount() {
-    const {setShips, setTotalCount, setIsFetching} = this.props;
-    setIsFetching(true);
+    const {getShips, currentPage, getShipsSearch} = this.props;
 
-    axios.get(`https://swapi.co/api/starships/`)
-      .then(response => {
-        setShips(response.data.results);
-        setTotalCount(response.data.count);
-        setIsFetching(false);
-      });
+    let {search, page} = this.props.match.params;
+    if(search && page){
+      getShipsSearch(search, Number(page));
+    } else {
+      getShips(currentPage);
+    }
+
   }
 
   onChangePages = (page) => {
-    const {setShips, setCurrentPage, setIsFetching} = this.props;
-    setCurrentPage(page);
-    setIsFetching(true);
+    const {getShips, searchText, getShipsSearch} = this.props;
 
-    axios.get(`https://swapi.co/api/starships/?page=${page}`)
-      .then(response => {
-        setShips(response.data.results);
-        setIsFetching(false);
-      });
+    if(searchText && page){
+      getShipsSearch(searchText, page);
+      this.props.history.push(`/search=${searchText}&page=${page}`);
+    } else {
+      getShips(page);
+    }
   };
 
   onSearch = (text) => {
-    const {searchShips, setIsFetching, setTotalCount, currentPage} = this.props;
-    if(text.length){
-      setIsFetching(true);
+    const {getShipsSearch, currentPage, getShips, setSearchText} = this.props;
 
-      axios.get(`https://swapi.co/api/starships/?search=${text}`)
-        .then(response => {
-          searchShips(response.data.results);
-          setTotalCount(response.data.count);
-          this.props.history.push(`?search=${text}&page=${currentPage}`);
-          setIsFetching(false);
-        });
+    if(text.length){
+      getShipsSearch(text, 1);
+      this.props.history.push(`/search=${text}&page=${1}`);
     } else{
       this.props.history.push(`/`);
-      setIsFetching(true);
-
-      axios.get(`https://swapi.co/api/starships/`)
-        .then(response => {
-          setShips(response.data.results);
-          setTotalCount(response.data.count);
-          setIsFetching(false);
-        });
+      getShips(currentPage);
+      setSearchText(null);
     }
   };
 
   render(){
-    const {ships, isFetching, setCurrentPage, totalCount, pageSize, currentPage} = this.props;
+    const {ships, isFetching, setCurrentPage, totalCount, pageSize, currentPage, searchText} = this.props;
     return (<>
       <Ships ships={ships}
                   setCurrentPage={setCurrentPage}
@@ -66,6 +57,7 @@ class ShipsContainer extends React.Component {
                   onChangePages={this.onChangePages}
                   onSearch={this.onSearch}
                   isFetching={isFetching}
+                  searchText={searchText}
     />
     </>)
   };
@@ -77,9 +69,11 @@ const mapStateToProps = (state) => {
     pageSize: state.shipsPage.pageSize,
     currentPage: state.shipsPage.currentPage,
     totalCount: state.shipsPage.totalCount,
+    searchText: state.shipsPage.searchText,
     isFetching: state.shipsPage.isFetching
   }
 };
 
 let ShipsContainerWithRouter = withRouter(ShipsContainer);
-export default connect(mapStateToProps, {setShips, setCurrentPage, setTotalCount, searchShips, setIsFetching})(ShipsContainerWithRouter);
+
+export default connect(mapStateToProps, {searchShips, getShips, getShipsSearch, setSearchText})(ShipsContainerWithRouter);

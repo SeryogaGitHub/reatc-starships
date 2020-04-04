@@ -9,8 +9,8 @@ function App() {
     <div className="center">
       <NavLink to='/' className={'link'}>Main page</NavLink>
       <Route exact path='/' render={() => <ShipsContainer/>}/>
-      <Route path='/starships/:userId?' render={() => <ShipContainer/>}/>
-      <Route path='/:text?&:page?' render={() => <ShipContainer/>}/>
+      <Route exact path='/search=:search&page=:page' render={() => <ShipsContainer/>}/>
+      <Route exact path='/starship/:userId?' render={() => <ShipContainer/>}/>
     </div>
   );
 }

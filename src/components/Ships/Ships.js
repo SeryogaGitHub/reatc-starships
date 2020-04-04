@@ -4,14 +4,14 @@ import {NavLink} from "react-router-dom";
 import Preloader from "../common/Preloader";
 
 const Ships = (props) => {
-  const {ships, currentPage, totalCount, pageSize, onSearch, onChangePages, isFetching} = props;
+  const {ships, currentPage, searchText, totalCount, pageSize, onSearch, onChangePages, isFetching} = props;
 
   let setIdProfile = (url) => {
     return Number(url.replace(/\D+/g,""))
   };
 
   let setShips = ships.map((ship, i) =>
-    <NavLink key={i} to={'/starships/' + setIdProfile(ship.url)} className={'ship'}>
+    <NavLink key={i} to={'/starship/' + setIdProfile(ship.url)} className={'ship'}>
       <h2>{ship.name}</h2>
 
       <ul>
@@ -24,7 +24,12 @@ const Ships = (props) => {
 
   return(
     <div className={"ships-page"}>
-      <input type="search" className={"search"} placeholder={"Search"} onChange={(e)=> onSearch(e.target.value)}/>
+      <input type="search"
+             value={searchText ? searchText : ""}
+             className={"search"}
+             placeholder={"Search"}
+             onChange={(e)=> onSearch(e.target.value)}
+             autoFocus={true}/>
 
       <Pagination currentPage={currentPage}
                   totalCount={totalCount}
