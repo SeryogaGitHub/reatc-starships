@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/starships/static/css/main.3e25b093.chunk.css",
+    "main.js": "/starships/static/js/main.ce75878c.chunk.js",
+    "main.js.map": "/starships/static/js/main.ce75878c.chunk.js.map",
+    "runtime-main.js": "/starships/static/js/runtime-main.d887b3b5.js",
+    "runtime-main.js.map": "/starships/static/js/runtime-main.d887b3b5.js.map",
+    "static/js/2.fc3dad06.chunk.js": "/starships/static/js/2.fc3dad06.chunk.js",
+    "static/js/2.fc3dad06.chunk.js.map": "/starships/static/js/2.fc3dad06.chunk.js.map",
+    "index.html": "/starships/index.html",
+    "precache-manifest.31d1fc888ff7602c15fbbcc8c8441a94.js": "/starships/precache-manifest.31d1fc888ff7602c15fbbcc8c8441a94.js",
+    "service-worker.js": "/starships/service-worker.js",
+    "static/css/main.3e25b093.chunk.css.map": "/starships/static/css/main.3e25b093.chunk.css.map",
+    "static/js/2.fc3dad06.chunk.js.LICENSE.txt": "/starships/static/js/2.fc3dad06.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d887b3b5.js",
+    "static/js/2.fc3dad06.chunk.js",
+    "static/css/main.3e25b093.chunk.css",
+    "static/js/main.ce75878c.chunk.js"
+  ]
+}
