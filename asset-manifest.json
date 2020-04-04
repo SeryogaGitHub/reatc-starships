@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/starships/static/css/main.3e25b093.chunk.css",
-    "main.js": "/starships/static/js/main.314b75a0.chunk.js",
-    "main.js.map": "/starships/static/js/main.314b75a0.chunk.js.map",
-    "runtime-main.js": "/starships/static/js/runtime-main.d887b3b5.js",
-    "runtime-main.js.map": "/starships/static/js/runtime-main.d887b3b5.js.map",
-    "static/js/2.6bd93806.chunk.js": "/starships/static/js/2.6bd93806.chunk.js",
-    "static/js/2.6bd93806.chunk.js.map": "/starships/static/js/2.6bd93806.chunk.js.map",
-    "index.html": "/starships/index.html",
-    "precache-manifest.4dd33197c2a938a7f386510228333cd6.js": "/starships/precache-manifest.4dd33197c2a938a7f386510228333cd6.js",
-    "service-worker.js": "/starships/service-worker.js",
-    "static/css/main.3e25b093.chunk.css.map": "/starships/static/css/main.3e25b093.chunk.css.map",
-    "static/js/2.6bd93806.chunk.js.LICENSE.txt": "/starships/static/js/2.6bd93806.chunk.js.LICENSE.txt"
+    "main.css": "/starships/build/static/css/main.3e25b093.chunk.css",
+    "main.js": "/starships/build/static/js/main.faf689f5.chunk.js",
+    "main.js.map": "/starships/build/static/js/main.faf689f5.chunk.js.map",
+    "runtime-main.js": "/starships/build/static/js/runtime-main.36143248.js",
+    "runtime-main.js.map": "/starships/build/static/js/runtime-main.36143248.js.map",
+    "static/js/2.6bd93806.chunk.js": "/starships/build/static/js/2.6bd93806.chunk.js",
+    "static/js/2.6bd93806.chunk.js.map": "/starships/build/static/js/2.6bd93806.chunk.js.map",
+    "index.html": "/starships/build/index.html",
+    "precache-manifest.eea3c39ee06b226a412ac5535c4f50e9.js": "/starships/build/precache-manifest.eea3c39ee06b226a412ac5535c4f50e9.js",
+    "service-worker.js": "/starships/build/service-worker.js",
+    "static/css/main.3e25b093.chunk.css.map": "/starships/build/static/css/main.3e25b093.chunk.css.map",
+    "static/js/2.6bd93806.chunk.js.LICENSE.txt": "/starships/build/static/js/2.6bd93806.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d887b3b5.js",
+    "static/js/runtime-main.36143248.js",
     "static/js/2.6bd93806.chunk.js",
     "static/css/main.3e25b093.chunk.css",
-    "static/js/main.314b75a0.chunk.js"
+    "static/js/main.faf689f5.chunk.js"
   ]
 }
